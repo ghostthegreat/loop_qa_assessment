@@ -8,8 +8,8 @@ class CrossFunctionalPage(BasePage):
         self.context = context
 
     async def navigate_to_cross_functional_page(self):
-        # Implement navigation logic here
-        await self.page.goto("https://app.asana.com/0/123456789/cross-functional")  # Update URL accordingly
+        
+        await self.page.goto("https://app.asana.com/0/123456789/cross-functional")  
         print("Navigated to Cross-functional project plan page")
 
     def get_column_locator(self, column_name: str):
