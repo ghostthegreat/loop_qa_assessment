@@ -13,8 +13,8 @@ async def browser_chrome_fixture(context):
     page = await browser.new_page()
     await page.set_viewport_size({"width": 1280, "height": 720})
     print("Browser started successfully")
-    # Navigate to the login page
-    await page.goto(os.getenv('baseURL'))  # Ensure LOGIN_URL is set in .env
+    
+    await page.goto(os.getenv('baseURL'))  
     context.browser = browser
     context.playwright = playwright
     context.page = page
