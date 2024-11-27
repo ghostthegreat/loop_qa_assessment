@@ -27,7 +27,7 @@ class CrossFunctionalPage(BasePage):
         assert await column_locator.is_visible(), f"Column '{column_name}' is not visible"
         task_locator = self.get_task_locator(column_name, task_name)
         assert await task_locator.is_visible(), f"Task '{task_name}' is not found in column '{column_name}'"
-        # Store the task details in context for tag verification
+        
         self.context.current_task_name = task_name
         self.context.current_column_name = column_name
 
